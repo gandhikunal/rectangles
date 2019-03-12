@@ -1,0 +1,9 @@
+exports_files(["test-negative-values.json",
+	       "test-negative-coordinates.json",
+	       "test-morethan10.json",
+	       "test-invalid-rects-key.json",
+	       "test-invalid-rectangle-keys.json",
+	       "test-invalid-data-types.json",
+	       "test-4rects.json",
+	       "test-invalid-json.json",
+	     ])
