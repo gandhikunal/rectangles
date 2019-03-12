@@ -34,8 +34,8 @@ public:
         try {
             ifile >> topContainer;
         } catch (json::parse_error &error) {
-            const std::string errMsg = "Invalid Json file provided.";
-            throw errMsg;
+            const std::string errorMessage = "Invalid Json file provided.";
+            throw errorMessage;
         }
         
         try {
@@ -74,22 +74,25 @@ public:
                             Rectangle rectangle = Rectangle(rectName.str(), x, y, h, w);
                             rectangleList.push_back(rectangle);
                         } else {
-                            std::string errMsg = "Negative Values provided in the Json file.";
-                            throw errMsg;
+                            std::string errorMessage =
+                            "Negative Values provided in the Json file.";
+                            throw errorMessage;
                         }
                     } else {
-                        std::string errMsg = "Invalid values presented in the Json file.";
-                        throw errMsg;
+                        std::string errorMessage =
+                        "Invalid values presented in the Json file.";
+                        throw errorMessage;
                     }
                     ++counter;
                 } catch (json::exception &error) {
-                    const std::string errMsg = "Invalid keys presented in the Json file.";
-                    throw errMsg;
+                    const std::string errorMessage =
+                    "Invalid keys presented in the Json file.";
+                    throw errorMessage;
                 }
             }
         } catch (json::exception &error) {
-            const std::string errMsg = "No rects key found in the Json file.";
-            throw errMsg;
+            const std::string errorMessage = "No rects key found in the Json file.";
+            throw errorMessage;
         }
         // Return a list of read input Rectangles
         return rectangleList;

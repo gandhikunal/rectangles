@@ -32,10 +32,10 @@ void printRectangles(const std::vector<Rectangle> &v, MessageType messageType) {
 static std::optional<Rectangle> compareRectangles(const Rectangle &r1,
                                                   const Rectangle &r2) {
     
-    // Calculating the botton corner coordinates for the first Rectangle
+    // Calculating the bottom corner coordinates for the first Rectangle
     int r1BottomRightCornerX = r1.xCoordinate + r1.height;
     int r1BottomRightCornerY = r1.yCoordinate + r1.width;
-    // Calculating the botton corner coordinates for the second Rectangle
+    // Calculating the bottom corner coordinates for the second Rectangle
     int r2BottomRightCornerX = r2.xCoordinate + r2.height;
     int r2BottomRightCornerY = r2.yCoordinate + r2.width;
     
@@ -103,7 +103,7 @@ static void intersectionsRecursive(const Rectangle &firstRectangle,
 }
 
 // Wrapper function which iterates over the input Rectangles one at a time and
-// finds all possible intersections involving that Rectangle and the reamaining
+// finds all possible intersections involving that Rectangle and the remaining
 // Rectangles in the input range
 std::vector<Rectangle>
 performIntersections(std::vector<Rectangle> &originalRectangles) {
